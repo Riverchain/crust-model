@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Nova+Round&display=swap');
+
 /* Style the header with a grey background and some padding */
 .header {
     overflow: hidden;
@@ -201,3 +202,10 @@ a:hover {
 a:active {
     color: blue;
 }
+
+
+p.justify_long_text {
+    text-align: justify;
+}
+
+#more {display: none;}
