@@ -1,17 +1,18 @@
 [package]
-name = "watum re-written in rust"
+name = "rust-water-quality-model"
 version = "0.1.0"
-edition = "2020"
+edition = "2018"
 authors = ["Mostafa Ramezani <Mostafa.Ramezani@outlook.com>",
            "Farhad Jazaei <fjazaei@memphis.edu>",
+           "Jenna Davis <jennadavis@stanford.edu>",
            "Pål-Tore Storli <pal-tore.storli@ntnu.no>"]
 license = "MIT OR Apache-2.0"
 homepage = "https://watum.ir"
 repository = "https://github.com/Riverchain/rust-wqm"
 documentation = "https://watum.ir/rust-wqm/docs"
 readme = "README.md"
-description = """
-watum is being re-written with rust in this project. Water qaulity engineers and environmental scientists can utilize this tool to simulate water bodies quality condition
+description ="""
+watum water quality model rewritten in rust
 """
 
 
