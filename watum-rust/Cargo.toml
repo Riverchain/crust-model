@@ -23,4 +23,6 @@ watum water quality model rewritten in rust
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
-#[dependencies]
+
+[dependencies]
+rand = "0.7.3"
