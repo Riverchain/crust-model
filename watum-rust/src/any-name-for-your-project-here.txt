@@ -7,8 +7,9 @@
 
 Project's name: "Mississippi valley"
 Length of the river (in meters): "15000"
-Number of observatory stations: "32"
-Longitudinal sag (default value= 0.0001): "0.0001"
+Number of observatory stations: 3
+Name of observatory stations: [apple pie, second station, sampling site]
+Longitudinal sag (default value= 0.0001): [0.0000857,0.00009]
 Latitude for start point of the river (optional):
 Longitude of the start point of the river (optional):
 Latitude for end point of the river (optional):
