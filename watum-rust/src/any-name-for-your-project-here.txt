@@ -5,9 +5,11 @@
 *************************************************
 *************************************************
 
-Project's name:
-Number of branches:
-Latitude for start point of the river:
-Longitude of the start point of the river:
-Latitude for end point of the river:
-Longitude of the end point of the river:
+Project's name: "Mississippi valley"
+Length of the river (in meters): "15000"
+Number of observatory stations: "32"
+Longitudinal sag (default value= 0.0001): "0.0001"
+Latitude for start point of the river (optional):
+Longitude of the start point of the river (optional):
+Latitude for end point of the river (optional):
+Longitude of the end point of the river (optional):
