@@ -7,9 +7,9 @@ authors = ["Mostafa Ramezani <Mostafa.Ramezani@outlook.com>",
            "Jenna Davis <jennadavis@stanford.edu>",
            "Pål-Tore Storli <pal-tore.storli@ntnu.no>"]
 license = "MIT OR Apache-2.0"
-homepage = "https://watum.ir"
+homepage = "https://github.com/Riverchain/rust-wqm"
 repository = "https://github.com/Riverchain/rust-wqm"
-documentation = "https://watum.ir/rust-wqm/docs"
+documentation = "https://riverchain.github.io/rust-wqm/docs"
 readme = "README.md"
 description ="""
 watum water quality model rewritten in rust
