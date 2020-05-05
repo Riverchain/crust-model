@@ -26,3 +26,4 @@ watum water quality model rewritten in rust
 
 [dependencies]
 rand = "0.7.3"
+nalgebra = "0.18"

@@ -1,7 +1,7 @@
 function Ex = Dx_2015_Disley( b, y, z, s, flow, u )
                              
 %% "Disley et al. (2015)" Longitudinal dispersion coefficient
-% Disley, T., Gharabaghi, B., Mahboubi, A. and McBean, A. (2015) Predictive equation for longitudinal dispersion coefficien. HYDROLOGICAL PROCESSES 29, 161-172.
+% Disley, T., Gharabaghi, B., Mahboubi, A. and McBean, A. (2015) Predictive equation %for longitudinal dispersion coefficien. HYDROLOGICAL PROCESSES 29, 161-172.
 % use meter and qubic meter as your dimentions
 a   = y .* ( b + z .* y);
 T   =b + 2 .* z .* y;

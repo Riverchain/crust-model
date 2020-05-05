@@ -1,21 +1,28 @@
-use std::io::BufReader;
-use std::io::BufRead;
-use std::io;
-use std::fs;
-
-fn main() -> io::Result<()> {
-    let mut args = std::env::args();
-    args.next();
-    for arg in args {
-        let lines = file_to_vec(arg)?;
-        println!("{:?}", lines);
-    }
-
-    Ok(())
+fn main() {
+    dx_2015_disley();
 }
 
-fn file_to_vec(filename: String) -> io::Result<Vec<String>> {
-    let file_in = fs::File::open(filename)?;
-    let file_reader = BufReader::new(file_in);
-    Ok(file_reader.lines().filter_map(io::Result::ok).collect())
+fn simple_watum (){
+    /*
+    This small function, calculates a single-point pollution source injection into a prismatic open channel problem. This is intended to show how reliable the mathematical scheme is by reducing the mathematical errors of truncation and distribution.
+    */
+    let channel_length :f32 = 10_000 as f32; // The length is equal to 10 thousands meters.
+    let initial_concentration :f32 = 1 as f32; // This variable defines the initial computational cell dye concentration in ppm.
+    let time_step :f32 =
+}
+
+fn diffusion_number (ldc: f32, delta_t: f32, delta_x: f32){
+    ldc*delta_t/(f32::powi(delta_x,2));
+}
+
+fn dx_2015_disley( b: f64, y: f64, z: f64, s: f64, flow: f64, u: f64 ) {
+
+    /*
+    Function Description and authors list.
+    "Disley et al. (2015)" Longitudinal dispersion coefficient Disley. T., Gharabaghi. B., Mahboubi. A. and McBean. A. (2015).
+    Paper's title: "Predictive equation for longitudinal dispersion coefficient."
+    Published @ HYDROLOGICAL PROCESSES 29, 161-172.
+    Use meter and cubic meter as your input values' dimensions.
+    */
+    
 }
