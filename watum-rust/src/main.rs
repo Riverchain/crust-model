@@ -1,5 +1,6 @@
 fn main() {
-    dx_2015_disley();
+    let delta_time = max_time_step_calculator(5 as f32,5 as f32);
+    println!(delta_time);
 }
 
 fn simple_watum (){
@@ -8,7 +9,12 @@ fn simple_watum (){
     */
     let channel_length :f32 = 10_000 as f32; // The length is equal to 10 thousands meters.
     let initial_concentration :f32 = 1 as f32; // This variable defines the initial computational cell dye concentration in ppm.
-    let time_step :f32 =
+    let delta_x:i32 = 1;
+    //let time_step = max_time_step_calculator(delta_x)*0.5;
+}
+
+fn max_time_step_calculator(ldc:f32,delta_x:f32){
+
 }
 
 fn diffusion_number (ldc: f32, delta_t: f32, delta_x: f32){
