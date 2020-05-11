@@ -2,13 +2,14 @@ use std::io;
 
 
 fn main() {
-    let mut delta_time = diffusion_number(5 as f32, 5 as f32, 1 as f32);
+    // Max time step calculation
+    let mut delta_time = max_time_step_calculator(5 as f32, 5 as f32);
     // Delta T section
 
     println!("The calculated time step is= {} seconds. Due to our records the finer the time step is, the more accurate the model performs. However, very small steps would lead your machine ends up with a memory crash.", delta_time);
-    // REGION A. Asking user for making a decision upon time step's length.
+    // REGION A: delta_t selection.
     loop {
-        println!("Please input a number less than");
+        println!("Please input a number between {} to {}", 0.001 ,delta_time);
 
         let mut delta_time_user_input = String::new();
 
@@ -21,14 +22,14 @@ fn main() {
             Err(_) => continue,
         };
 
-        if delta_time_user_input_converted_to_f32 <= delta_time {
+        if delta_time_user_input_converted_to_f32 <= delta_time && delta_time_user_input_converted_to_f32 !=0 as f32 && delta_time_user_input_converted_to_f32 >= 0 as f32{
             println!("Appropriate time step has been chosen ✓");
+            break;
         } else {
             println!("Chose an smaller time step ↺");
-            break;
         }
     }
-    // End of REGION A
+    // End of REGION A: delta_t selection.
 }
 
 fn simple_watum (){
@@ -41,11 +42,15 @@ fn simple_watum (){
     //let time_step = max_time_step_calculator(delta_x)*0.5;
 }
 
-fn max_time_step_calculator(ldc:f32,delta_x:f32){
+fn max_time_step_calculator(ldc:f32,delta_x:f32) -> f32 {
+     0.5 *
+         delta_x.powi(2)
+    *
+         ldc.powi(-1)
 
 }
 
-fn diffusion_number (ldc: f32, delta_t: f32, delta_x: f32) -> f32 {
+fn mathematical_diffusion_number(ldc: f32, delta_t: f32, delta_x: f32) -> f32 {
     ldc*delta_t/(f32::powi(delta_x,2))
 }
 
