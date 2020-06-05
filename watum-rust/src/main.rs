@@ -1,7 +1,9 @@
 use std::io;
+use std::intrinsics::sqrtf32;
 
 
 fn main() {
+    let project_name:String = String::from("Mississippi River");
     // Max time step calculation
     let mut delta_time = max_time_step_calculator(5 as f32, 5 as f32);
     // Delta T section
@@ -43,25 +45,30 @@ fn simple_watum (){
 }
 
 fn max_time_step_calculator(ldc:f32,delta_x:f32) -> f32 {
-     0.5 *
-         delta_x.powi(2)
-    *
-         ldc.powi(-1)
-
+     0.5 * delta_x.powi(2) * ldc.powi(-1)
 }
+
 
 fn mathematical_diffusion_number(ldc: f32, delta_t: f32, delta_x: f32) -> f32 {
     ldc*delta_t/(f32::powi(delta_x,2))
 }
 
-fn dx_2015_disley( b: f64, y: f64, z: f64, s: f64, flow: f64, u: f64 ) {
+fn dx_2015_disley(b: f32, y: f32, z: f32, s: f32, flow: f32, u: f32 ) -> f32 {
 
-    /*
-    Function Description and authors list.
+    /* Function description
     "Disley et al. (2015)" Longitudinal dispersion coefficient Disley. T., Gharabaghi. B., Mahboubi. A. and McBean. A. (2015).
     Paper's title: "Predictive equation for longitudinal dispersion coefficient."
     Published @ HYDROLOGICAL PROCESSES 29, 161-172.
     Use meter and cubic meter as your input values' dimensions.
     */
-    
+    let a= y * (b + z * y);
+    let T= b + 2 * z * y;
+    let p= b + 2 * y * sqrt(1+ powi(z,2));
+    let r= a/p;
+    let EARTH_GRAVITY_ACCELERATION:f32 = 9.807; // meters/s*s
+    let g= 9.81;
+    let w= a/y;
+    let ustar= sqrtf32(g * r * s);
+    y * ustar * 3.563 * ((u /  (sqrt(g * y))) .^ -0.4117) .* ((w  ./  y) .^ 0.6776) *
+        ((u/ustar) .^ 1.0132);
 }
