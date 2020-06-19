@@ -1,8 +1,8 @@
 [package]
-name = "rust-water-quality-model"
-version = "0.1.0"
+name = "crust-water-quality-model"
+version = "0.2.0"
 edition = "2018"
-authors = ["Mostafa Ramezani <Mostafa.Ramezani@outlook.com>",
+authors = ["Mostafa Ramezani <Mostafa.Ramezani@memphis.edu>",
            "Farhad Jazaei <fjazaei@memphis.edu>",
            "Jenna Davis <jennadavis@stanford.edu>",
            "Pål-Tore Storli <pal-tore.storli@ntnu.no>"]
@@ -12,16 +12,8 @@ repository = "https://github.com/Riverchain/rust-wqm"
 documentation = "https://riverchain.github.io/rust-wqm/docs"
 readme = "README.md"
 description ="""
-watum water quality model rewritten in rust
+Crust is a water quality model written in rust
 """
-
-
-#name = "watum-rust"
-#version = "0.1.0"
-#authors = ["Mostafa Ramezani <ramezani.m@ut.ac.ir>"]
-#edition = "2020"
-
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 
 [dependencies]

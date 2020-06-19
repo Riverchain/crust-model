@@ -3,7 +3,26 @@ use std::intrinsics::sqrtf32;
 
 
 fn main() {
-    let project_name:String = String::from("Mississippi River");
+    struct project_specification {
+        project_name: String,
+        author: String,
+        date: String,
+        company: String,
+        river_name: String,
+        region: String,
+    }
+
+    let mut mississippi_project = project_specification {
+        project_name: String::from("Mississippi River"),
+        author: String,
+        date: String,
+        company: String,
+        river_name: String,
+        region: String,
+    };
+
+    mississippi_project.author = String::from("Mostafa");
+
     // Max time step calculation
     let mut delta_time = max_time_step_calculator(5 as f32, 5 as f32);
     // Delta T section
@@ -71,4 +90,16 @@ fn dx_2015_disley(b: f32, y: f32, z: f32, s: f32, flow: f32, u: f32 ) -> f32 {
     let ustar= sqrtf32(g * r * s);
     y * ustar * 3.563 * ((u /  (sqrt(g * y))) .^ -0.4117) .* ((w  ./  y) .^ 0.6776) *
         ((u/ustar) .^ 1.0132);
+}
+
+fn _first_word(s: &String) -> usize {
+    let bytes = s.as_bytes();
+
+    for (i, &item) in bytes.iter().enumerate() {
+        if item == b' ' {
+            return i;
+        }
+    }
+
+    s.len()
 }
